@@ -1,0 +1,172 @@
+.chart {
+  &__container {
+    position: relative;
+    // padding-top: 120px;
+    // padding-bottom: 100px;
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  &__title {
+    display: none;
+    @media (max-width: $mob) {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 30px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      @include gradient;
+    }
+  }
+  &__invest {
+    display: none;
+    @media (max-width: $tablet) {
+      display: inline-block;
+      background: linear-gradient(55.17deg, #4071b3 15.27%, #28bbc0 85.1%);
+      padding: 15px 45px;
+      border-radius: 3.75px;
+      font-weight: 600;
+      font-size: 10px;
+      position: relative;
+      //
+      $border: 1px;
+      background: $white;
+      background-clip: padding-box;
+      border: solid $border transparent;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -$border;
+        border-radius: inherit;
+        background: linear-gradient(55.17deg, #4071b3 15.27%, #28bbc0 85.1%);
+      }
+      p {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        background: linear-gradient(55.17deg, #4071b3 15.27%, #28bbc0 85.1%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        font-weight: 600;
+        font-size: 21px;
+        @media (max-width: $mobSmall) {
+          font-size: 16px;
+        }
+      }
+      @media (max-width: $mobSmall) {
+        padding: 12px 27px;
+      }
+    }
+  }
+  &__buttons {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    // background-color: $fon;
+    @media (max-width: $tablet) {
+      position: static;
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    @media (max-width: $mobSmall) {
+      gap: 10px;
+    }
+  }
+
+  &__wrapper {
+    // border: 1px solid red;
+    // border-width: 0px 1px 1px 0px;
+  }
+
+  &__button {
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+    min-width: 195px;
+    width: 195px;
+    //  height: 45px;
+    height: 40px;
+    background: linear-gradient(55.17deg, #4071b3 15.27%, #28bbc0 85.1%);
+    //  -webkit-background-clip: text;
+    //  -webkit-text-fill-color: transparent;
+    //  background-clip: text;
+    //  text-fill-color: transparent;
+    padding: 7px 0px;
+    border-radius: 12px;
+    //  border: 1px solid #4071b3;
+    font-weight: 600;
+    font-size: 10px;
+    position: relative;
+    //
+    $border: 1px;
+    background: $fon;
+    background-clip: padding-box; /* !importanté */
+    border: solid $border transparent; /* !importanté */
+    @media (max-width: $mobSmall) {
+      min-width: 155px;
+      width: 155px;
+      height: 35px;
+      font-size: 16px;
+      padding: 4px 0px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -$border; /* !importanté */
+      border-radius: inherit; /* !importanté */
+      background: linear-gradient(55.17deg, #4071b3 15.27%, #28bbc0 85.1%);
+    }
+    p {
+      text-align: center;
+      font-weight: 700;
+      font-size: 24px;
+      position: relative;
+      z-index: 2;
+      background: linear-gradient(55.17deg, #4071b3 15.27%, #28bbc0 85.1%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    &.active {
+      background: linear-gradient(55.17deg, #4071b3 15.27%, #28bbc0 85.1%);
+      border: none;
+      p {
+        background: none;
+        -webkit-background-clip: none;
+        -webkit-text-fill-color: none;
+        text-fill-color: none;
+        -webkit-text-fill-color: #ffffff;
+        color: $white;
+      }
+    }
+  }
+}
+.active {
+}
+
+.ch {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
