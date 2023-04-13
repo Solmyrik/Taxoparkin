@@ -1,3 +1,23 @@
+// window.addEventListener('scroll', function () {
+//   /* Получение значения scrollTop (вертикальный отступ сверху) */
+//   /* и установка свойства transform для внутреннего блока */
+//   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//   document.querySelector('.strategy__left').style.transform =
+//     'translateY(' + scrollTop * 0.05 + 'px)';
+// });
+
+// const strategy = document.querySelector('.strategy');
+// const strategyContainer = document.querySelector('.strategy__container');
+
+// window.addEventListener('scroll', function () {
+//   console.log(strategy.getBoundingClientRect().y, 'ok');
+//   if (strategy.getBoundingClientRect().y < 200) {
+//     strategyContainer.style.position = 'fixed';
+//     strategyContainer.style.left = '50%';
+//     strategyContainer.style.top = 0;
+//     strategy.style.paddingBottom = 652 + Math.abs(strategy.getBoundingClientRect().y) + 'px';
+//   }
+// });
 // const ctx = document.getElementById('myChart');
 
 // const currentWidth = window.innerWidth;
@@ -180,7 +200,7 @@ const currentWidth = window.innerWidth;
 
 const chartBlock = document.querySelector('.chart');
 
-console.log(chartBlock.getBoundingClientRect().y);
+console.log(window.pageYOffset);
 
 window.addEventListener('scroll', (e) => {
   // console.log(window.pageYOffset, chartBlock.getBoundingClientRect().y);
