@@ -1,0 +1,131 @@
+.contact {
+  &__container {
+    display: flex;
+    align-items: center;
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+      height: 600px;
+      position: relative;
+      justify-content: flex-start;
+
+      // align-items: flex-end;
+    }
+  }
+
+  &__left {
+    flex: 0 1 30%;
+    @media (max-width: $tablet) {
+      // padding-top: 200px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 122%;
+    margin-bottom: 32px;
+    @include gradient;
+    text-transform: uppercase;
+    @media (max-width: $tablet) {
+      position: absolute;
+      font-weight: 700;
+      font-size: 16px;
+      top: 130px;
+      left: 15px;
+    }
+  }
+  .form__wrapper {
+    height: 38px;
+    max-width: 300px;
+
+    select {
+      height: 38px;
+      width: 100%;
+      color: $black;
+    }
+    &::before {
+      top: 9px;
+    }
+    @media (max-width: $tablet) {
+      max-width: 100%;
+      height: 50px;
+      select {
+        height: 50px;
+      }
+      &::before {
+        top: 15px;
+      }
+    }
+  }
+  &__select {
+    margin-bottom: 25px;
+  }
+
+  &__steps {
+  }
+
+  &__step {
+    p {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 120%;
+      margin-bottom: 23px;
+    }
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  &__map {
+    flex: 0 1 70%;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    @media (max-width: $tablet) {
+      position: absolute;
+      width: 800px;
+      left: 0px;
+      top: 0;
+    }
+  }
+  &__point {
+    position: absolute;
+    background-image: url('../img/contact/point.svg');
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    top: 33%;
+    left: 24%;
+    cursor: pointer;
+    &:nth-child(1) {
+      top: 33%;
+      left: 24%;
+    }
+    &:nth-child(2) {
+      top: 66%;
+      left: 28%;
+    }
+    &:nth-child(3) {
+      top: 61%;
+      left: 27%;
+    }
+    &:nth-child(4) {
+      top: 51%;
+      left: 30%;
+    }
+    &.active {
+      background-image: url('../img/contact/point-a.svg');
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+.form {
+  &__wrapper {
+  }
+
+  &__select {
+  }
+}

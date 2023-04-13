@@ -1,0 +1,47 @@
+.footer {
+  padding: 45px 0px;
+  @media (max-width: $tablet) {
+    display: none;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    justify-content: space-between;
+    color: #1e1e1e;
+  }
+
+  &__copy {
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 11px;
+    img {
+      width: 130px;
+    }
+  }
+
+  &__menu {
+  }
+
+  &__list {
+  }
+
+  &__item {
+    text-align: right;
+  }
+
+  &__link {
+    text-align: right;
+    color: #1e1e1e;
+    transition: color 0.3s;
+    &:hover {
+      color: $blue;
+    }
+  }
+}
