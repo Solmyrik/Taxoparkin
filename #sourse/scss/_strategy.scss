@@ -37,9 +37,27 @@
 
   &__right {
     flex: 0 1 50%;
+    min-width: 0;
+    // overflow: hidden;
+    overflow: hidden;
   }
 
+  &__wrapper {
+    min-width: 0;
+    display: flex;
+    width: 100%;
+    // flex-direction: column;
+  }
+  &__mob {
+    display: none;
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
   &__block {
+    min-width: 0;
+    width: 100%;
+    flex: 0 0 100%;
   }
 
   &__title {

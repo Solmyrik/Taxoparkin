@@ -3666,6 +3666,34 @@ body::after {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.strategy__wrapper {
+  min-width: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.strategy__mob {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .strategy__mob {
+    display: block;
+  }
+}
+
+.strategy__block {
+  min-width: 0;
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
 }
 
 .strategy__title {
