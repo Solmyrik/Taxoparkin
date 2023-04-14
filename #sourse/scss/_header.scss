@@ -63,6 +63,8 @@
     align-items: center;
     gap: 10px;
     margin-right: 15px;
+    flex: 1 1 auto;
+    justify-content: space-between;
     @media (max-width: $pc) {
       flex-wrap: wrap;
     }
@@ -81,8 +83,10 @@
   &__number {
     font-weight: 700;
     font-size: 9px;
+    gap: 2px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    // align-items: center;
     color: #393939;
     span {
       font-weight: 400;
