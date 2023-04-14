@@ -20,7 +20,7 @@ const changePoints = (value) => {
   }
   if (value === 'Санкт-Петербург') {
     contactsSteps[3].classList.add('active');
-    contactsPoints[3].classList.add('active');
+    contactsPoints[4].classList.add('active');
   }
   if (value === 'Краснодар') {
     contactsSteps[3].classList.add('active');
@@ -29,5 +29,9 @@ const changePoints = (value) => {
   if (value === 'Ростов-на-Дону') {
     contactsSteps[2].classList.add('active');
     contactsPoints[1].classList.add('active');
+  }
+  if (value === 'ОАЭ') {
+    contactsSteps[4].classList.add('active');
+    contactsPoints[3].classList.add('active');
   }
 };

@@ -4112,6 +4112,11 @@ body::after {
   left: 30%;
 }
 
+.contact__point:nth-child(5) {
+  top: 93%;
+  left: 22%;
+}
+
 .contact__point.active {
   background-image: url("../img/contact/point-a.svg");
   width: 25px;
