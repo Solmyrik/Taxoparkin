@@ -4,57 +4,42 @@
   <head>
     <style>
       /* Стили для блока */
-      .block {
-        width: 100%;
-        height: 500px;
-        background-image: url('https://picsum.photos/1200/800');
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        overflow: hidden;
-        /* Установка высоты для внутреннего блока и маргина */
-        /* чтобы он отображался в центре родительского блока */
-      }
-      .inner-block {
-        height: 300px;
-        margin: 0 auto;
-        background-color: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+      .container {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
       }
-      h1 {
-        color: white;
-        font-size: 48px;
+
+      .text {
+        width: 50%;
+        overflow-y: scroll; /* Enable vertical scrolling */
+      }
+
+      .image {
+        width: 50%;
+        position: sticky;
+        top: 0; /* Fixed to the top of the container */
       }
     </style>
   </head>
   <body>
-    <div class="block">
-      <div class="inner-block">
-        <h1>Заголовок блока</h1>
+    <div class="container">
+      <div class="text">
+        <p>Some long text that will change with scrolling...</p>
+      </div>
+      <div class="image">
+        <img src="img/contact/map.png" alt="Fixed image" />
       </div>
     </div>
     <script>
       /* Вызов функции при скролле страницы */
-      window.addEventListener('scroll', function () {
-        /* Получение значения scrollTop (вертикальный отступ сверху) */
-        /* и установка свойства transform для внутреннего блока */
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        document.querySelector('.inner-block').style.transform =
-          'translateY(' + scrollTop * 0.5 + 'px)';
+      // Listen for scroll events on the text container
+      document.querySelector('.text').addEventListener('scroll', function () {
+        // Check if the user has scrolled to a certain point
+        if (this.scrollTop > 500) {
+          // Replace 500 with your desired threshold
+          // Change the text to a different one
+          this.querySelector('p').textContent = 'Some other text...';
+        }
       });
     </script>
   </body>
 </html>
-``` В этом примере "parallax" достигается путем изменения свойства transform для внутреннего блока
-при скролле страницы. Значение transform translateY используется для перемещения блока вверх или
-вниз на определенное количество пикселей, определяемое значением scrollTop. Мы умножаем значение
-scrollTop на 0,5, чтобы сделать движение более плавным. Кроме того, для родительского блока
-установлено свойство "overflow: hidden", чтобы скрыть часть внутреннего блока, выходящую за пределы
-родительского блока при перемещении.
