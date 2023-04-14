@@ -3740,6 +3740,10 @@ body::after {
   }
 }
 
+.strategy__name__b {
+  margin-bottom: 20px;
+}
+
 .strategy__text {
   font-weight: 500;
   font-size: 18px;
