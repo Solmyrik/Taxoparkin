@@ -1,10 +1,13 @@
 .contact {
+  @media (max-width: $mob) {
+    margin: 0;
+  }
   &__container {
     display: flex;
     align-items: center;
     @media (max-width: $tablet) {
       flex-direction: column-reverse;
-      height: 600px;
+      height: 710px;
       position: relative;
       justify-content: flex-start;
 
@@ -16,6 +19,8 @@
     flex: 0 1 30%;
     @media (max-width: $tablet) {
       // padding-top: 200px;
+      display: flex;
+      flex-direction: column-reverse;
     }
   }
 
@@ -37,6 +42,9 @@
   .form__wrapper {
     height: 38px;
     max-width: 300px;
+    @media (max-width: $tablet) {
+      // order: 2;
+    }
 
     select {
       height: 38px;
@@ -59,9 +67,19 @@
   }
   &__select {
     margin-bottom: 25px;
+    @media (max-width: $tablet) {
+      order: 2;
+      margin-bottom: 15px;
+    }
   }
 
   &__steps {
+    margin-bottom: 80px;
+    @media (max-width: $tablet) {
+      margin: 0;
+      // order: 1;
+      order: 1;
+    }
   }
 
   &__step {
@@ -131,5 +149,26 @@
   }
 
   &__select {
+  }
+}
+
+.app {
+  @media (max-width: $tablet) {
+    margin-bottom: 15px;
+    order: 3;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 120%;
+    margin-bottom: 15px;
+  }
+
+  &__items {
+    display: flex;
+    gap: 17px;
+  }
+
+  &__item {
   }
 }

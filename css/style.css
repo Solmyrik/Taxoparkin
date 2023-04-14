@@ -3962,6 +3962,12 @@ body::after {
   text-fill-color: transparent;
 }
 
+@media (max-width: 767.98px) {
+  .contact {
+    margin: 0;
+  }
+}
+
 .contact__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3977,7 +3983,7 @@ body::after {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    height: 600px;
+    height: 710px;
     position: relative;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -3989,6 +3995,18 @@ body::after {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 30%;
           flex: 0 1 30%;
+}
+
+@media (max-width: 991.98px) {
+  .contact__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .contact__title {
@@ -4044,6 +4062,28 @@ body::after {
 
 .contact__select {
   margin-bottom: 25px;
+}
+
+@media (max-width: 991.98px) {
+  .contact__select {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-bottom: 15px;
+  }
+}
+
+.contact__steps {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 991.98px) {
+  .contact__steps {
+    margin: 0;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .contact__step {
@@ -4121,6 +4161,29 @@ body::after {
   background-image: url("../img/contact/point-a.svg");
   width: 25px;
   height: 25px;
+}
+
+@media (max-width: 991.98px) {
+  .app {
+    margin-bottom: 15px;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+.app__title {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 120%;
+  margin-bottom: 15px;
+}
+
+.app__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 17px;
 }
 
 .footer {
