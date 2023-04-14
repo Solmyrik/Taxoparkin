@@ -236,7 +236,7 @@
   }
 
   &__yandex {
-    margin-left: 10px;
+    margin-right: -10px;
     @media (max-width: $tablet) {
       display: flex;
       justify-content: flex-end;
