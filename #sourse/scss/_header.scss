@@ -197,6 +197,7 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
+      transition: all 0.3s;
     }
     @media (max-width: $mob) {
       grid-area: 3 / 1 / 4 / 3;
@@ -205,6 +206,31 @@
       width: 178px;
       padding: 10px 20px;
       font-size: 14px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(55.17deg, #4071b3 15.27%, #28bbc0 85.1%);
+      opacity: 0;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+      p {
+        background: none;
+        -webkit-background-clip: none;
+        -webkit-text-fill-color: none;
+        text-fill-color: none;
+        -webkit-text-fill-color: #ffffff;
+        color: $white;
+      }
     }
   }
 

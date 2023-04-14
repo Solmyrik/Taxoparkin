@@ -764,6 +764,8 @@ main {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 @media (max-width: 767.98px) {
@@ -782,6 +784,32 @@ main {
     padding: 10px 20px;
     font-size: 14px;
   }
+}
+
+.header__button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(55.17deg, #4071b3 15.27%, #28bbc0 85.1%);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header__button:hover::after {
+  opacity: 1;
+}
+
+.header__button:hover p {
+  background: none;
+  -webkit-background-clip: none;
+  -webkit-text-fill-color: none;
+  text-fill-color: none;
+  -webkit-text-fill-color: #ffffff;
+  color: #ffffff;
 }
 
 .header__yandex {
@@ -1091,6 +1119,32 @@ main {
   .main__button {
     padding: 12px 27px;
   }
+}
+
+.main__button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(55.17deg, #4071b3 15.27%, #28bbc0 85.1%);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main__button:hover::after {
+  opacity: 1;
+}
+
+.main__button:hover p {
+  background: none;
+  -webkit-background-clip: none;
+  -webkit-text-fill-color: none;
+  text-fill-color: none;
+  -webkit-text-fill-color: #ffffff;
+  color: #ffffff;
 }
 
 @media (max-width: 767.98px) {
@@ -2960,6 +3014,33 @@ main {
 }
 
 .form__button p {
+  background: none;
+  -webkit-background-clip: none;
+  -webkit-text-fill-color: none;
+  text-fill-color: none;
+  -webkit-text-fill-color: #ffffff;
+  color: #ffffff;
+}
+
+.form__button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(55.17deg, #28bbc0 15.27%, #4071b3 85.1%);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 12px;
+}
+
+.form__button:hover::after {
+  opacity: 1;
+}
+
+.form__button:hover p {
   background: none;
   -webkit-background-clip: none;
   -webkit-text-fill-color: none;
