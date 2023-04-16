@@ -120,6 +120,31 @@ body::after {
   img {
     width: 31px;
   }
+
+  @media (max-width: $mob) {
+    top: 250px;
+    right: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  &_3 {
+    @media (max-width: $mob) {
+      top: 220px;
+    }
+  }
+  &_2 {
+    @media (max-width: $mob) {
+      top: 196px;
+    }
+  }
+  &_1 {
+    @media (max-width: $mob) {
+      top: 210px;
+      img {
+        width: 25px;
+      }
+    }
+  }
 }
 .popup__block {
   padding: 30px;
@@ -136,10 +161,13 @@ body::after {
 .popup__title {
   font-weight: 700;
   font-size: 20px;
+  max-width: 177px;
   line-height: 122%;
   @include gradient;
   @media (max-width: $mob) {
     margin-bottom: 20px;
+    max-width: 260px;
+    text-align: center;
   }
 }
 .popup__car {
@@ -148,6 +176,8 @@ body::after {
   }
   @media (max-width: $mob) {
     transform: rotate(-90deg);
+    margin-top: -20px;
+    margin-bottom: 50px;
   }
 }
 .popup__text {
@@ -160,6 +190,7 @@ body::after {
   }
   @media (max-width: $mob) {
     font-size: 10px;
+    text-align: center;
     p {
       margin-bottom: 10px;
     }
